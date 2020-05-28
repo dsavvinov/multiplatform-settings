@@ -29,6 +29,7 @@ pluginManagement {
         mavenCentral()
         maven(url = "https://plugins.gradle.org/m2/")
         maven(url = "https://dl.bintray.com/jetbrains/kotlin-native-dependencies")
+        maven(url = "https://dl.bintray.com/kotlin/kotlin-dev")
     }
 }
 rootProject.name = "MultiplatformSettings"

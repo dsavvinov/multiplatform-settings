@@ -13,23 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-plugins {
-    kotlin("jvm") version "1.4-M2-eap-82"
-}
-
-repositories {
-    google()
-    gradlePluginPortal()
-    mavenCentral()
-    jcenter()
-    maven(url = "https://dl.bintray.com/kotlin/kotlin-dev")
-}
-
-dependencies {
-    implementation(kotlin("stdlib"))
-    implementation(kotlin("gradle-plugin"))
-    implementation("com.android.tools.build:gradle:3.6.3")
-    implementation("org.jetbrains.dokka:dokka-gradle-plugin:0.10.1")
-    implementation(kotlin("compiler-embeddable"))
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven(url = "https://plugins.gradle.org/m2/")
+        maven(url = "https://dl.bintray.com/kotlin/kotlin-dev")
+    }
 }

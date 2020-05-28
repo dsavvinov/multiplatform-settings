@@ -23,6 +23,13 @@ plugins {
 
 standardConfiguration(isTestModule = true)
 
+repositories {
+    google()
+    mavenCentral()
+    jcenter()
+    maven(url = "https://dl.bintray.com/kotlin/kotlin-dev")
+}
+
 kotlin {
     sourceSets {
         commonMain {

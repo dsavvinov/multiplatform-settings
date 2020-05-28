@@ -25,6 +25,13 @@ plugins {
 }
 apply(from = "../gradle/publish.gradle")
 
+repositories {
+    google()
+    mavenCentral()
+    jcenter()
+    maven(url = "https://dl.bintray.com/kotlin/kotlin-dev")
+}
+
 standardConfiguration(
     "android",
     "iosArm32",
