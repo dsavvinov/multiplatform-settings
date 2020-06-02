@@ -61,8 +61,9 @@ private fun KotlinMultiplatformExtension.buildAllTargets(targetPresets: NamedDom
     // Create empty targets for presets with no specific configuration
     targetPresets.forEach {
         if (it.name == "jvmWithJava") return@forEach // Probably don't need this, and it chokes on Android plugin
-        if (targets.findByName(it.name) == null) {
+        if (targets.findByName(it.name) == null && "js" !in it.name) {
             targetFromPreset(it)
+            println("creating target ${it.name}")
         }
     }
 
